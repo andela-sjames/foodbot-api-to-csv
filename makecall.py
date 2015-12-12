@@ -18,7 +18,6 @@ def readfile():
         resp += ', '.join(return_string) + '\n'
     return resp
 
-f = open('food.csv', 'w')
-f.write(headers)
-f.write(readfile())
-f.close()
+with open("food.csv", "w") as outputfile:
+    outputfile.write(headers)
+    outputfile.write(readfile())
